@@ -1,10 +1,12 @@
 .container {
   display: flex; /* Utilisation de flexbox pour aligner la barre latérale et le profil */
-  height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+  height: 100vh;
+  background-color: #02314e; /* Prendre toute la hauteur de la fenêtre */
 }
 
 .sidebar {
-  width: 250px; /* Largeur de la barre latérale */
+  width: 299px; /* Largeur de la barre latérale */
+  /* border-radius: 20px; */
   background-color: #f5f8fa; /* Couleur de fond */
   padding: 20px; /* Espacement interne */
   border-right: 1px solid #e1e8ed; /* Bordure à droite */

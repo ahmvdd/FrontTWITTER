@@ -1,33 +1,33 @@
 // auth.js
 const API_URL = 'http://localhost:3000';
 
-export const loginUser = async (loginData) => {
-    try {
-        const response = await fetch(`${API_URL}/users/login`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(loginData),
-        });
+// export const loginUser = async (loginData) => {
+//     try {
+//         const response = await fetch(`${API_URL}/users/login`, {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: JSON.stringify(loginData),
+//         });
 
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.message || "Erreur lors de la connexion.");
-        }
+//         if (!response.ok) {
+//             const errorData = await response.json();
+//             throw new Error(errorData.message || "Erreur lors de la connexion.");
+//         }
 
-        const data = await response.json();
-        console.log("Réponse du serveur :", data); // Vérifiez ici
+//         const data = await response.json();
+//         console.log("Réponse du serveur :", data); // Vérifiez ici
 
-        // Stocker le token dans le localStorage
-        localStorage.setItem('token', data.token); // Assurez-vous que le token est dans la réponse
+//         // Stocker le token dans le localStorage
+//         localStorage.setItem('token', data.token); // Assurez-vous que le token est dans la réponse
 
-        return data; // Retourner les données de l'utilisateur
-    } catch (error) {
-        console.error("Erreur lors de la connexion :", error.message);
-        throw error;
-    }
-};
+//         return data; // Retourner les données de l'utilisateur
+//     } catch (error) {
+//         console.error("Erreur lors de la connexion :", error.message);
+//         throw error;
+//     }
+// };
 
 export const registerUser = async (userData) => {
     try {
@@ -48,6 +48,39 @@ export const registerUser = async (userData) => {
         return data;
     } catch (error) {
         console.error("Erreur lors de l'inscription :", error.message);
+        throw error;
+    }
+};
+
+
+export const loginUser = async (loginData) => {
+    try {
+        const response = await fetch(`${API_URL}/users/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(loginData),
+        });
+
+        // Ajout d'un log pour voir la réponse brute
+        console.log("Statut de la réponse :", response.status);
+        console.log("Corps de la réponse :", await response.text()); // Affiche le corps brut
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || "Erreur lors de la connexion.");
+        }
+
+        const data = await response.json();
+        console.log("Réponse du serveur :", data); // Vérifiez ici
+
+        // Stocker le token dans le localStorage
+        localStorage.setItem('token', data.token); // Assurez-vous que le token est dans la réponse
+
+        return data; // Retourner les données de l'utilisateur
+    } catch (error) {
+        console.error("Erreur lors de la connexion :", error.message);
         throw error;
     }
 };

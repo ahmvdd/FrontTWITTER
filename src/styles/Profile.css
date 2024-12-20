@@ -1,3 +1,5 @@
+
+
 .profile {
   margin-left: 300px; /* Décalage pour compenser la largeur de la barre latérale */
   padding: 20px; /* Espacement interne */
@@ -6,7 +8,8 @@
   border: 1px solid #e1e8ed; /* Bordure légère */
   border-radius: 10px; /* Coins arrondis */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée */
-  height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+  height: 100%;
+  width: 100%; /* Prendre toute la hauteur de la fenêtre */
   overflow-y: auto; /* Ajouter un défilement si nécessaire */
 }
 

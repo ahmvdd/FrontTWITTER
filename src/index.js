@@ -23,9 +23,10 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<FirstP />} />
-        {/* <Route path="/login" element={<LoginForm />} /> */}
-        {/* <Route path="/register" element={<RegisterForm />} /> */}
+        
         <Route path="/welcomePage" element={<WelcomePage />} />
+        <Route path="/Profile" element={<Profile />} />
+        
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -35,8 +35,8 @@ const WelcomePage = () => {
             <div className="sidebar">
                 <h1>Logo</h1>
                 <div className="menu">
-                    <a href="#" className="menu-item">Home</a>
-                    <a href="#" className="menu-item">Profile</a>
+                    <a href="/welcomePage" className="menu-item">Home</a>
+                    <a href="/Profile" className="menu-item">Profile</a>
 
                     <a href="#" className="menu-item">deconection</a>
                     
