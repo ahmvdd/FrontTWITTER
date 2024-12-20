@@ -1,0 +1,62 @@
+.add-article-container {
+    position: fixed; /* Positionnement fixe */
+    bottom: 20px; /* Espace depuis le bas */
+    right: 20px; /* Espace depuis la droite */
+    background: linear-gradient(135deg, #f0f4ff, #c1d6ff); /* Dégradé de couleurs */
+    padding: 33px; /* Ajout de padding interne pour le formulaire */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Ombre portée plus marquée */
+    z-index: 1000; /* S'assurer que le formulaire est au-dessus des autres éléments */
+    width: 320px; /* Largeur du formulaire */
+    transition: transform 0.3s ease; /* Animation lors du changement de style */
+}
+
+.add-article-container h3 {
+    margin: 0 0 15px; /* Espace sous le titre */
+    font-size: 22px; /* Taille de police pour le titre */
+    color: #2c3e50; /* Couleur du texte du titre */
+    text-align: center; /* Centre le titre */
+    font-family: 'Arial', sans-serif; /* Police moderne */
+}
+
+.add-article-container input[type="text"],
+.add-article-container textarea {
+    width: 100%; /* Largeur à 100% pour remplir le conteneur */
+    padding: 12px; /* Rembourrage interne */
+    margin: 10px 0; /* Marge autour des champs */
+    border: 2px solid #007BFF; /* Bordure avec une couleur accentuée */
+    border-radius: 8px; /* Coins arrondis */
+    font-size: 14px; /* Taille de police pour les champs */
+    font-family: 'Arial', sans-serif; /* Police moderne */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animation lors du focus */
+}
+
+.add-article-container input[type="text"]:focus,
+.add-article-container textarea:focus {
+    border-color: #0056b3; /* Couleur de bordure au focus */
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.5); /* Ombre au focus */
+    outline: none; /* Supprimer le contour par défaut */
+}
+
+.add-article-container button {
+    background-color: #007BFF; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    padding: 12px; /* Rembourrage interne */
+    border: none; /* Pas de bordure */
+    border-radius: 8px; /* Coins arrondis */
+    cursor: pointer; /* Changement de curseur au survol */
+    font-size: 16px; /* Taille de police pour le bouton */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animation lors du survol */
+    width: 100%; /* Largeur à 100% pour le bouton */
+}
+
+.add-article-container button:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+    transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
+/* Styles supplémentaires pour le texte des boutons */
+.add-article-container button:focus {
+    outline: none; /* Supprimer le contour par défaut */
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5); /* Ombre légère au focus */
+}

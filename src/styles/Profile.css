@@ -1,0 +1,84 @@
+.profile {
+  margin-left: 300px; /* Décalage pour compenser la largeur de la barre latérale */
+  padding: 20px; /* Espacement interne */
+  max-width: calc(100% - 250px); /* Largeur maximum pour le profil */
+  background-color: #fff; /* Fond blanc */
+  border: 1px solid #e1e8ed; /* Bordure légère */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée */
+  height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+  overflow-y: auto; /* Ajouter un défilement si nécessaire */
+}
+
+.profile-banner {
+  height: 200px; /* Hauteur de la bannière */
+  background-color: #1da1f2; /* Couleur de fond de la bannière */
+  border-radius: 10px 10px 0 0; /* Coins arrondis en haut */
+}
+
+.profile-avatar {
+  width: 100px; /* Largeur de l'avatar */
+  height: 100px; /* Hauteur de l'avatar */
+  border-radius: 50%; /* Rendre l'avatar circulaire */
+  background-color: #e1e8ed; /* Couleur de fond de l'avatar */
+  position: relative;
+  top: -50px; /* Positionner l'avatar au-dessus de la bannière */
+  left: 20px; /* Espacement à gauche */
+  border: 3px solid white; /* Bord blanc autour de l'avatar */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); /* Ombre autour de l'avatar */
+}
+
+.profile-info {
+  padding: 10px;
+  margin-top: 60px; /* Espacement pour faire de la place pour l'avatar */
+}
+
+.profile-name {
+  font-size: 24px; /* Taille du nom */
+  font-weight: bold;
+  color: #333; /* Couleur du texte du nom */
+}
+
+.profile-username {
+  color: #657786; /* Couleur grise pour le nom d'utilisateur */
+  font-size: 16px; /* Taille du texte pour le nom d'utilisateur */
+}
+
+.tweets {
+  margin-top: 20px; /* Espacement entre le profil et les tweets */
+}
+
+.tweet {
+  padding: 15px; /* Espacement interne pour les tweets */
+  border-bottom: 1px solid #e1e8ed; /* Séparation des tweets */
+  transition: background-color 0.3s; /* Effet de transition sur le fond */
+}
+
+.tweet:hover {
+  background-color: #f5f8fa; /* Couleur de fond au survol */
+}
+
+.tweet-header {
+  display: flex; /* Alignement des avatars et des noms */
+  align-items: center;
+}
+
+.tweet-avatar {
+  width: 40px; /* Largeur de l'avatar du tweet */
+  height: 40px; /* Hauteur de l'avatar du tweet */
+  border-radius: 50%; /* Avatar circulaire */
+  background-color: #e1e8ed; /* Couleur de fond */
+  margin-right: 10px; /* Espacement à droite de l'avatar */
+}
+
+.tweet-text {
+  margin: 10px 0; /* Espacement autour du texte du tweet */
+  color: #14171a; /* Couleur du texte du tweet */
+  font-size: 14px; /* Taille du texte du tweet */
+}
+
+.tweet-image {
+  max-width: 100%; /* Largeur maximum de l'image */
+  border-radius: 10px; /* Coins arrondis de l'image */
+  margin-top: 10px; /* Espacement au-dessus de l'image */
+}

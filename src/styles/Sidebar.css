@@ -1,0 +1,38 @@
+.container {
+  display: flex; /* Utilisation de flexbox pour aligner la barre latérale et le profil */
+  height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+}
+
+.sidebar {
+  width: 250px; /* Largeur de la barre latérale */
+  background-color: #f5f8fa; /* Couleur de fond */
+  padding: 20px; /* Espacement interne */
+  border-right: 1px solid #e1e8ed; /* Bordure à droite */
+  position: fixed; /* Position fixe pour rester visible en scrollant */
+  height: 100%; /* Prendre toute la hauteur de la fenêtre */
+  overflow-y: auto; /* Ajouter un défilement si nécessaire */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Ombre à droite */
+}
+
+.sidebar ul {
+  list-style-type: none; /* Pas de puces */
+  padding: 0; /* Supprimer le padding */
+}
+
+.sidebar li {
+  margin: 10px 0; /* Espacement entre les éléments */
+  cursor: pointer; /* Curseur pointeur */
+  color: #1da1f2; /* Couleur du texte */
+  padding: 10px; /* Espacement interne */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s; /* Transition pour le survol */
+}
+
+.sidebar li:hover {
+  background-color: #e8f5fd; /* Couleur de fond au survol */
+}
+
+.sidebar li.active {
+  background-color: #d1e9ff; /* Couleur de fond pour l'élément actif */
+  font-weight: bold; /* Mettre en gras l'élément actif */
+}
