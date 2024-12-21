@@ -135,23 +135,32 @@ Réinitialisation et typographie
 
 /* Media Queries */
 @media (max-width: 680px) {
+    .container {
+        flex-direction: column; /* Empile les sections les unes au-dessus des autres */
+    }
+
     .sidebar {
         width: 50px; /* Réduire la largeur pour les petits écrans */
     }
+    
     .sidebar h1 {
         font-size: 16px; /* Réduire la taille de police */
     }
+    
     .right-sidebar {
         display: none; /* Masquer la barre latérale droite */
     }
+    
     .menu-item {
         font-size: 12px; /* Réduire la taille de police des éléments du menu */
         padding: 10px; /* Ajuster le padding */
     }
+    
     .tweet-button {
         padding: 10px; 
         font-size: 12px; /* Réduire la taille de police du bouton */
     }
+    
     .header {
         font-size: 16px; /* Réduire la taille de police */
     }
