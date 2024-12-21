@@ -140,3 +140,33 @@
     font-weight: bold;
     color: #4a90e2;
 }
+
+@media (max-width: 480px) {
+    .sidebar h1 {
+        font-size: 18px; /* Réduire la taille de police pour les petits écrans */
+    }
+    .sidebar {
+        display: none;
+    }
+
+    .menu-item {
+        font-size: 14px; /* Réduire la taille des éléments de menu */
+    }
+
+    .tweet-button {
+        padding: 10px; /* Réduire le padding du bouton */
+        font-size: 14px; /* Réduire la taille de police du bouton */
+    }
+
+    .header {
+        font-size: 16px; /* Réduire la taille de la police d'en-tête */
+    }
+}
+
+@media (max-width: 1418px) {
+   
+    .sidebar {
+        width: 15%;
+    }
+
+}

@@ -10,7 +10,6 @@
   background-color: #f5f8fa; /* Couleur de fond */
   padding: 20px; /* Espacement interne */
   border-right: 1px solid #e1e8ed; /* Bordure à droite */
-  position: fixed; /* Position fixe pour rester visible en scrollant */
   height: 100%; /* Prendre toute la hauteur de la fenêtre */
   overflow-y: auto; /* Ajouter un défilement si nécessaire */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Ombre à droite */
