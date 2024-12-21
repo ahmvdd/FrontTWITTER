@@ -1,37 +1,34 @@
-/* Réinitialisation et typographie */
+Réinitialisation et typographie
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    overflow-y:hidden ;
 }
 
 /* Conteneur principal */
 .container {
     display: flex;
+    flex-direction: row; /* Assure que les éléments sont en ligne */
     height: 100vh;
     background-color: #f7f9fc; /* Fond pastel clair */
-   
 }
 
 /* Barre latérale gauche */
 .sidebar {
-    width: 60px;
+    width: 60px; /* Peut être ajusté en fonction de l'écran */
     background-color: #e8f0fe; /* Bleu clair pastel */
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-right: 1px solid #d6dee7;
-    
 }
 
 .sidebar h1 {
     text-align: center;
     color: #4a90e2; /* Bleu doux */
     font-size: 22px;
-    margin-bottom: 20px;
 }
 
 .menu-item {
@@ -88,23 +85,19 @@
 
 /* Boîte de Tweet */
 .tweet-box input {
-    width: 40%;
+    width: 80%; /* Ajustement pour les petits écrans */
     border-radius: 20px;
     border: 1px solid #d6dee7;
     background-color: #f7f9fc;
     color: #4a90e2;
     font-size: 16px;
     transition: border-color 0.3s;
-    margin-left:28% ;
-    
+    margin-left: 10%; /* Centre le champ d'entrée */
 }
-
-
 
 /* Liste de tweets */
 .tweets {
     margin-top: 20px;
-    margin-left:27% ;
     align-items: center;
 }
 
@@ -117,7 +110,6 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
 }
-
 
 /* Barre latérale droite */
 .right-sidebar {
@@ -141,32 +133,36 @@
     color: #4a90e2;
 }
 
-@media (max-width: 480px) {
-    .sidebar h1 {
-        font-size: 18px; /* Réduire la taille de police pour les petits écrans */
-    }
+/* Media Queries */
+@media (max-width: 680px) {
     .sidebar {
-        display: none;
+        width: 50px; /* Réduire la largeur pour les petits écrans */
     }
-
+    .sidebar h1 {
+        font-size: 16px; /* Réduire la taille de police */
+    }
+    .right-sidebar {
+        display: none; /* Masquer la barre latérale droite */
+    }
     .menu-item {
-        font-size: 14px; /* Réduire la taille des éléments de menu */
+        font-size: 12px; /* Réduire la taille de police des éléments du menu */
+        padding: 10px; /* Ajuster le padding */
     }
-
     .tweet-button {
-        padding: 10px; /* Réduire le padding du bouton */
-        font-size: 14px; /* Réduire la taille de police du bouton */
+        padding: 10px; 
+        font-size: 12px; /* Réduire la taille de police du bouton */
     }
-
     .header {
-        font-size: 16px; /* Réduire la taille de la police d'en-tête */
+        font-size: 16px; /* Réduire la taille de police */
     }
 }
 
 @media (max-width: 1418px) {
-   
     .sidebar {
-        width: 15%;
+        width: 25%; /* Ajustement pour les écrans de taille intermédiaire */
     }
-
 }
+
+
+
+

@@ -18,6 +18,7 @@ const Profile = () => {
   console.log('chbsd:' ,user )
 
   return (
+    
     <div className="container">
       <Sidebar />
       <div className="profile">
@@ -28,25 +29,21 @@ const Profile = () => {
           <div className="profile-username">{user.user?.Prenom}</div> 
         </div>
         <div className="tweets">
-          {user?.tweets?.map((tweet) => (
-            <div className="tweet" key={tweet.id}>
+          
+            <div className="tweet" >
               <div className="tweet-header">
-                <div className="tweet-avatar">il semble que vous n'avez rien poster !</div>
+                <div className="tweet-avatar"></div>
                 <div>
-                  <span className="tweet-user">{user.user?.Name}</span>
-                  <span className="tweet-username">{user.user?.Prenom}</span> {/* Corrigé ici aussi */}
+                  <span className="tweet-user">il semble que vous n'avez rien poster pour le moment !</span>
+                  <span className="tweet-username"></span> 
                 </div>
               </div>
-              <div className="tweet-text">{tweet.text}il semble que vous n'avez rien poster !</div>
-              {tweet.imageUrl && (
-                <img
-                  className="tweet-image"
-                  src={tweet.imageUrl}
-                  alt="Tweet Image"
-                />
-              )}
+              <div className="tweet-text">section en travaux🚧</div>
+              
+                
+            
             </div>
-          ))}
+         
         </div>
       </div>
     </div>

@@ -1,9 +1,7 @@
-
-
 .profile {
   margin-left: 300px; /* Décalage pour compenser la largeur de la barre latérale */
   padding: 20px; /* Espacement interne */
-  max-width: calc(100% - 250px); /* Largeur maximum pour le profil */
+  max-width: calc(100% - 300px); /* Largeur maximum pour le profil */
   background-color: #fff; /* Fond blanc */
   border: 1px solid #e1e8ed; /* Bordure légère */
   border-radius: 10px; /* Coins arrondis */
@@ -13,10 +11,6 @@
   overflow-y: auto; /* Ajouter un défilement si nécessaire */
 }
 
-a{
-  text-decoration: none;
-  
-}
 .profile-banner {
   height: 200px; /* Hauteur de la bannière */
   background-color: #1da1f2; /* Couleur de fond de la bannière */
@@ -88,4 +82,74 @@ a{
   max-width: 100%; /* Largeur maximum de l'image */
   border-radius: 10px; /* Coins arrondis de l'image */
   margin-top: 10px; /* Espacement au-dessus de l'image */
+}
+
+/* Styles Responsive */
+@media (max-width: 1200px) {
+  .profile {
+    margin-left: 250px; /* Réduire le décalage pour les écrans moyens */
+    max-width: calc(100% - 250px); /* Ajuster la largeur maximum */
+  }
+}
+
+@media (max-width: 992px) {
+  .profile {
+    margin-left: 200px; /* Réduire le décalage pour les écrans plus petits */
+    max-width: calc(100% - 200px); /* Ajuster la largeur maximum */
+  }
+
+  .profile-avatar {
+    width: 80px; /* Réduire la taille de l'avatar */
+    height: 80px; /* Réduire la taille de l'avatar */
+  }
+
+  .profile-name {
+    font-size: 20px; /* Réduire la taille du nom */
+  }
+
+  .profile-username {
+    font-size: 14px; /* Réduire la taille du nom d'utilisateur */
+  }
+
+  .tweet {
+    padding: 10px; /* Réduire l'espacement interne des tweets */
+  }
+
+  .tweet-text {
+    font-size: 12px; /* Réduire la taille du texte des tweets */
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {
+    margin-left: 0; /* Supprimer le décalage pour les petits écrans */
+    max-width: 100%; /* Prendre toute la largeur */
+  }
+
+  .profile-banner {
+    height: 150px; /* Ajuster la hauteur de la bannière */
+  }
+
+  .profile-avatar {
+    width: 70px; /* Réduire encore la taille de l'avatar */
+    height: 70px; /* Réduire encore la taille de l'avatar */
+  }
+
+  .profile-name {
+    font-size: 18px; /* Réduire la taille du nom */
+  }
+
+  .profile-username {
+    font-size: 12px; /* Réduire la taille du nom d'utilisateur */
+  }
+}
+
+@media (max-width: 576px) {
+  .tweet {
+    padding: 8px; /* Réduire l'espacement interne des tweets */
+  }
+
+  .tweet-text {
+    font-size: 10px; /* Réduire la taille du texte des tweets */
+  }
 }

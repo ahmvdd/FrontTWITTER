@@ -1,18 +1,17 @@
 .container {
   display: flex; /* Utilisation de flexbox pour aligner la barre latérale et le profil */
   height: 100vh;
-  background-color: #02314e; /* Prendre toute la hauteur de la fenêtre */
 }
 
 .sidebar {
-  width: 299px; /* Largeur de la barre latérale */
-  /* border-radius: 20px; */
-  background-color: #f5f8fa; /* Couleur de fond */
+  width: 25%; /* Largeur de la barre latérale */
   padding: 20px; /* Espacement interne */
   border-right: 1px solid #e1e8ed; /* Bordure à droite */
   height: 100%; /* Prendre toute la hauteur de la fenêtre */
   overflow-y: auto; /* Ajouter un défilement si nécessaire */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Ombre à droite */
+  background-color: #02314e; /* Prendre toute la hauteur de la fenêtre */
+
 }
 
 .sidebar ul {
@@ -21,12 +20,20 @@
 }
 
 .sidebar li {
-  margin: 10px 0; /* Espacement entre les éléments */
+  margin: 10px 0; 
   cursor: pointer; /* Curseur pointeur */
   color: #1da1f2; /* Couleur du texte */
   padding: 10px; /* Espacement interne */
   border-radius: 5px; /* Coins arrondis */
   transition: background-color 0.3s; /* Transition pour le survol */
+}
+
+a {
+  text-decoration: none; 
+   color: white;
+
+  width: 100%; /* Prendre toute la largeur */
+  display: block; /* S'assurer que l'élément de lien occupe toute la largeur */
 }
 
 .sidebar li:hover {
@@ -36,4 +43,22 @@
 .sidebar li.active {
   background-color: #d1e9ff; /* Couleur de fond pour l'élément actif */
   font-weight: bold; /* Mettre en gras l'élément actif */
+}
+
+/* Styles Responsive pour les écrans de moins de 500px */
+@media (max-width: 500px) {
+  .sidebar {
+    width: 20%; /* La barre latérale prend toute la largeur */
+    padding: 10px; /* Réduire le padding */
+  }
+
+  .sidebar li {
+    font-size: 14px; /* Réduire la taille de la police */
+    padding: 8px; /* Réduire l'espacement interne */
+    margin: 5px 0; /* Réduire la marge entre les éléments */
+  }
+
+  a {
+    width: auto;
+  }
 }
