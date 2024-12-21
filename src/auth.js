@@ -37,11 +37,15 @@ export const registerUser = async (userData) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(userData),
+            
         });
+        console.log("Réponse brute du serveur :", userData); //pour tester !
 
         if (!response.ok) {
             const errorData = await response.json();
+
             throw new Error(errorData.message || "Erreur lors de l'inscription.");
+
         }
 
         const data = await response.json();
