@@ -23,7 +23,10 @@ function FirstP() {
     try {
       const userData = await loginUser(loginData);
       console.log("Utilisateur connecté :", userData);
+      localStorage.setItem('userData', JSON.stringify(userData));
       navigate('/welcomePage');
+
+
     } catch (error) {
       console.error("Erreur lors de la connexion :", error);
       alert("Échec de la connexion. Veuillez vérifier vos identifiants.");
@@ -52,6 +55,9 @@ function FirstP() {
     try {
       const response = await registerUser(signupData);
       console.log("Utilisateur inscrit :", response);
+
+      localStorage.setItem('userData', JSON.stringify(response)); // Stocker dans localStorage
+
       navigate('/welcomePage');
     } catch (error) {
       console.error("Erreur lors de l'inscription :", error.message);

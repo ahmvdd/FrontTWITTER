@@ -13,6 +13,10 @@
   overflow-y: auto; /* Ajouter un défilement si nécessaire */
 }
 
+a{
+  text-decoration: none;
+  
+}
 .profile-banner {
   height: 200px; /* Hauteur de la bannière */
   background-color: #1da1f2; /* Couleur de fond de la bannière */
